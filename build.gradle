@@ -1,3 +1,11 @@
+// Project build.gradle file.
+buildscript {
+    ext.kotlin_version = '1.7.10'
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
     id 'com.android.application' version '7.1.1' apply false
