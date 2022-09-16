@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.listapresenteprof.model.Gift;
+import com.listapresenteprof.repository.GiftRepository;
 
 public class AddGiftActivity extends AppCompatActivity {
 
@@ -54,6 +55,10 @@ public class AddGiftActivity extends AppCompatActivity {
        String description = inputEditTextDescription.getText().toString();
 
        Gift gift = new Gift(name,giftName,description);
+
+        GiftRepository.getInstance().save(gift);
+
+        onBackPressed();
 
     }
 }
